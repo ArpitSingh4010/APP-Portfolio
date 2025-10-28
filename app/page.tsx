@@ -60,31 +60,36 @@ export default function Home() {
       title: "NPTEL - Programming in Java",
       issuer: "IIT Kharagpur",
       description: "Comprehensive course covering Java fundamentals, OOP principles, and practical coding exercises.",
-      image: "/nptel.png"
+      image: "/nptel.png",
+      link: "https://drive.google.com/file/d/1poHgeqYqF5mh2mg1oOLO-l12yld_-eoo/view?usp=sharing"
     },
     {
       title: "Google Vertex AI Badge",
       issuer: "Google Cloud",
       description: "Hands-on experience with building, training, and deploying ML models using Vertex AI platform.",
-      image: "/genai.png"
+      image: "/genai.png",
+      link: "https://drive.google.com/file/d/1gZL2FAUf8_bH008yqJe6x3pVqx9Kwn25/view?usp=sharing"
     },
     {
       title: "OCI 2025 Certified GenAI Professional",
       issuer: "Oracle University",
       description: "Expertise in deploying and managing generative AI solutions on Oracle Cloud Infrastructure.",
-      image: "/orcale.png"
+      image: "/orcale.png",
+      link: "https://drive.google.com/file/d/1wIhKxSA_loCtHUjqYZUzxlHDEenaS9-j/view?usp=sharing"
     },
     {
       title: "Java Programming Certification",
       issuer: "Udemy",
       description: "Advanced Java programming concepts and best practices.",
-      image: "/udemy.png"
+      image: "/udemy.png",
+      link: "https://drive.google.com/file/d/11fMqhKOmeiA512Xe0b5dcVLpIyZfo0JT/view?usp=sharing"
     },
     {
       title: "Hackathon Participation",
       issuer: "Coding Competition",
       description: "Active participation in hackathons and coding competitions.",
-      image: "/hackathon.png"
+      image: "/hackathon.png",
+      link: "https://drive.google.com/file/d/1NZ48_B7cGcR-QaRGpQCvR9cHekBQ-9GT/view?usp=sharing"
     }
   ];
 
@@ -355,9 +360,20 @@ export default function Home() {
                     <p className="text-sm text-blue-600 dark:text-blue-400 mb-2">
                       {cert.issuer}
                     </p>
-                    <p className="text-sm text-gray-600 dark:text-gray-300">
+                    <p className="text-sm text-gray-600 dark:text-gray-300 mb-3">
                       {cert.description}
                     </p>
+                    <motion.a
+                      href={cert.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 text-sm font-medium"
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      <ExternalLink className="w-4 h-4" />
+                      View Certificate
+                    </motion.a>
                   </div>
                 </motion.div>
               ))}
